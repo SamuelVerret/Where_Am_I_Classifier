@@ -207,7 +207,7 @@ train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
 # Apply transforms and add labels for auxiliary tasks.
 # Pickle transformed train and val datasets to save time
 # Run once, then set to 0
-if 0:
+if 1:
     train_dataset = prepare_rotated_dataset(train_dataset, 1)
     val_dataset = prepare_rotated_dataset(val_dataset, 0)
     train_dataset = CustomDataset(train_dataset, transform=train_transform)
